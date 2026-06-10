@@ -7,7 +7,7 @@ import { HealthAPI, TransactionsAPI } from '../../lib/api';
 import { useTheme } from '../../contexts/ThemeContext';
 
 /* ── helpers ── */
-const fmt = (n: number) => `₹${Math.round(n).toLocaleString('en-IN')}`;
+const fmt = (n: number) => `₱${Math.round(n).toLocaleString('en-PH')}`;
 
 function getHealthInfo(score: number) {
     if (score >= 70) return { label: 'Excellent', color: '#10b981', bg: 'rgba(16,185,129,0.1)' };

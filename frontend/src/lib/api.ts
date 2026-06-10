@@ -1,5 +1,5 @@
 /**
- * Finexa API Service Layer
+ * Finyx API Service Layer
  * Base URL: http://localhost:8000
  */
 
@@ -8,17 +8,17 @@ export const BASE_URL = (import.meta as any).env.VITE_API_URL || 'http://localho
 // ─── Token helpers ──────────────────────────────────────────────
 function getTokens() {
     return {
-        access: localStorage.getItem('finexa_access') || '',
-        refresh: localStorage.getItem('finexa_refresh') || '',
+        access: localStorage.getItem('finyx_access') || '',
+        refresh: localStorage.getItem('finyx_refresh') || '',
     };
 }
 function saveTokens(access: string, refresh: string) {
-    localStorage.setItem('finexa_access', access);
-    localStorage.setItem('finexa_refresh', refresh);
+    localStorage.setItem('finyx_access', access);
+    localStorage.setItem('finyx_refresh', refresh);
 }
 function clearTokens() {
-    localStorage.removeItem('finexa_access');
-    localStorage.removeItem('finexa_refresh');
+    localStorage.removeItem('finyx_access');
+    localStorage.removeItem('finyx_refresh');
 }
 
 // ─── Core fetch wrapper ─────────────────────────────────────────
@@ -47,7 +47,7 @@ async function apiFetch<T>(
         clearTokens();
         // Don't hard-redirect — let components handle the error gracefully
         // Only redirect if there's no stored user session at all
-        const storedUser = localStorage.getItem('finexa_user');
+        const storedUser = localStorage.getItem('finyx_user');
         if (!storedUser) {
             window.location.href = '/login';
         }

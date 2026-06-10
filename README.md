@@ -1,8 +1,8 @@
 <p align="center">
-<img src="./SS/1.png" width="95%" alt="Finexa Platform Preview"/>
+<img src="./SS/1.png" width="95%" alt="Finyx Platform Preview"/>
 </p>
 
-<h1 align="center">🚀 Finexa</h1>
+<h1 align="center">🚀 Finyx</h1>
 
 <p align="center">
 <b>AI-Powered Personal Finance Intelligence</b>
@@ -14,11 +14,11 @@ AI Financial Coach • Financial Health Score • Smart Budgeting • Expense Tr
 
 <p align="center">
 
-<a href="https://finexa322.vercel.app">
+<a href="https://finyx322.vercel.app">
 <img src="https://img.shields.io/badge/Launch%20Platform-7c3aed?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 
-<a href="https://github.com/sakshinikam05/Finexa">
+<a href="https://github.com/sakshinikam05/Finyx">
 <img src="https://img.shields.io/badge/GitHub%20Repository-9333ea?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 
@@ -57,7 +57,7 @@ AI Financial Coach • Financial Health Score • Smart Budgeting • Expense Tr
 
 ## 📚 Overview
 
-**Finexa** is an AI-powered personal finance management platform designed to help users take control of their financial health. The platform leverages advanced machine learning, real-time data processing, and intuitive user interfaces to provide comprehensive financial insights, automated expense tracking, and intelligent financial recommendations.
+**Finyx** is an AI-powered personal finance management platform designed to help users take control of their financial health. The platform leverages advanced machine learning, real-time data processing, and intuitive user interfaces to provide comprehensive financial insights, automated expense tracking, and intelligent financial recommendations.
 
 ### Mission
 Empower individuals to achieve financial wellness through AI-driven insights, habit building, and personalized financial guidance.
@@ -109,7 +109,7 @@ Empower individuals to achieve financial wellness through AI-driven insights, ha
 ## 📁 Project Structure
 
 ```
-Logic_Legion_Finexa/
+Logic_Legion_Finyx/
 ├── backend/
 │   ├── ai_assistant/                    # AI & document processing module
 │   │   ├── migrations/                  # Database migrations
@@ -217,8 +217,8 @@ Logic_Legion_Finexa/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/sakshinikam05/Logic_Legion_Finexa.git
-cd Logic_Legion_Finexa
+git clone https://github.com/sakshinikam05/Logic_Legion_Finyx.git
+cd Logic_Legion_Finyx
 ```
 
 ### 2. Backend Setup
@@ -316,7 +316,7 @@ Services will be available at:
 
 ### Base URL
 ```
-https://api.finexa.com/api/v1
+https://api.finyx.com/api/v1
 ```
 
 ### Authentication
@@ -375,13 +375,13 @@ For complete API documentation, see [API_DOCS.txt](./backend/API_DOCS.txt)
 ### PostgreSQL
 ```bash
 # Create database
-createdb finexa_db
+createdb finyx_db
 
 # Create user
-createuser finexa_user -P
+createuser finyx_user -P
 
 # Grant privileges
-psql -c "GRANT ALL PRIVILEGES ON DATABASE finexa_db TO finexa_user;"
+psql -c "GRANT ALL PRIVILEGES ON DATABASE finyx_db TO finyx_user;"
 ```
 
 ### MongoDB
@@ -588,8 +588,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support & Contact
 
 - **Documentation**: [Backend README](./backend/README.md)
-- **Issue Tracker**: [GitHub Issues](https://github.com/yourusername/Logic_Legion_Finexa/issues)
-- **Email**: sakshi.s.nikam05@gmail.com
+- **Issue Tracker**: [GitHub Issues](https://github.com/yourusername/Logic_Legion_Finyx/issues)
+- **Email**: marconidominyx@khoni.tech
 
 ---
 
@@ -615,57 +615,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 🤝 Contributors
+## 🤝 Owner & Developer
 
-<p align="left">
+Marconi Dominyx
+- **LinkedIn**: [marconidominyx](https://www.linkedin.com/in/marconidominyx/)
+- **Personal Website**: [khoni.tech](https://khoni.tech/)
 
-<table>
-<tr>
-
-<td align="center">
-<a href="https://github.com/sakshinikam05">
-<img src="https://github.com/sakshinikam05.png" width="50" style="border-radius:50%;" /><br>
-<b>Sakshi</b>
-</a>
-</td>
-
-<td align="center">
-<a href="https://github.com/sukhadajoshi13">
-<img src="https://github.com/sukhadajoshi13.png" width="50" style="border-radius:50%;" /><br>
-<b>Sukhada</b>
-</a>
-</td>
-
-<td align="center">
-<a href="https://github.com/atharva-404">
-<img src="https://github.com/atharva-404.png" width="50" style="border-radius:50%;" /><br>
-<b>Atharva</b>
-</a>
-</td>
-
-<td align="center">
-<a href="https://github.com/yashpatil322">
-<img src="https://github.com/yashpatil322.png" width="50" style="border-radius:50%;" /><br>
-<b>Yash</b>
-</a>
-</td>
-
-</tr>
-</table>
-
-</p>
-
----
-
-<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
-
-<p align="center">
-💜 <b>Built with passion by the Logic Legion Team</b>
-</p>
-
-<p align="center">
-Finexa © 2026 • All rights reserved
-</p>
-
-<p align="center">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
 

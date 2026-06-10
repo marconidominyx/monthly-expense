@@ -29,7 +29,7 @@ const navItems = [
     { to: '/dashboard/settings', icon: Settings, label: 'Settings' },
 ];
 
-function FinexaScorePill() {
+function FinyxScorePill() {
     const { isDark } = useTheme();
     const [score, setScore] = useState<number | null>(null);
 
@@ -55,7 +55,7 @@ function FinexaScorePill() {
                 boxShadow: isDark ? `0 2px 12px rgba(${color.bg},0.15)` : `0 2px 8px rgba(${color.bg},0.05)`,
             }}>
             <div className="w-1.5 h-1.5 rounded-full" style={{ background: color.text, boxShadow: `0 0 6px ${isDark ? `rgba(${color.bg},0.9)` : `rgba(${color.bg},0.4)`}` }} />
-            <span className="opacity-80">Fin Score</span>
+            <span className="opacity-80">Finyx Score</span>
             <span className="font-bold">{score !== null ? s : '…'}</span>
         </div>
     );
@@ -242,7 +242,7 @@ export default function DashboardLayout() {
                 <div className="relative flex-shrink-0">
                     <div className="absolute -inset-1.5 rounded-full opacity-55"
                         style={{ background: 'radial-gradient(circle, rgba(168,85,247,0.5), transparent 70%)', filter: 'blur(5px)', animation: 'glowPulse 3s ease-in-out infinite' }} />
-                    <img src="/logo.png" alt="Finexa" className="relative w-8 h-8 object-contain drop-shadow-[0_0_9px_rgba(168,85,247,0.9)]" />
+                    <img src="/logo.png" alt="Finyx" className="relative w-8 h-8 object-contain drop-shadow-[0_0_9px_rgba(168,85,247,0.9)]" />
                 </div>
                 {!collapsed && (
                     <span className="font-display font-extrabold text-xl"
@@ -255,7 +255,7 @@ export default function DashboardLayout() {
                             backgroundClip: 'text',
                             letterSpacing: '-0.01em'
                         }}>
-                        Finexa
+                        Finyx
                     </span>
                 )}
             </Link>
@@ -263,25 +263,13 @@ export default function DashboardLayout() {
             {/* AI Credits */}
             {!collapsed && (
                 <div className="mx-3 mt-3 mb-1 p-3 rounded-xl" style={{ background: 'rgba(168,85,247,0.07)', border: '1px solid rgba(168,85,247,0.15)' }}>
-                    <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-1.5">
-                            <Sparkles size={11} style={{ color: 'var(--purple)' }} />
-                            <span className="text-xs font-semibold text-2">AI Credits</span>
-                        </div>
-                        <button onClick={() => navigate('/subscription')}
-                            className="flex items-center gap-0.5 text-[10px] font-bold px-2 py-0.5 rounded-lg transition-all"
-                            style={{ background: 'rgba(168,85,247,0.2)', color: 'var(--purple-light)' }}>
-                            <Plus size={9} /> Buy
-                        </button>
+                    <div className="flex items-center gap-1.5 mb-1">
+                        <Sparkles size={11} style={{ color: 'var(--purple)' }} />
+                        <span className="text-xs font-semibold text-2">AI Assistant</span>
                     </div>
-                    <div className="flex justify-between mb-1.5">
-                        <span className="text-sm font-bold text-1">{aiCredits.toLocaleString()}</span>
-                        <span className="text-[10px] text-3">{credPct.toFixed(0)}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full overflow-hidden" style={{ background: isDark ? 'rgba(168,85,247,0.12)' : 'rgba(124,58,237,0.08)' }}>
-                        <motion.div className="h-full rounded-full"
-                            initial={{ width: 0 }} animate={{ width: `${credPct}%` }} transition={{ duration: 0.8 }}
-                            style={{ background: credPct > 20 ? 'linear-gradient(90deg, #7c3aed, #a855f7)' : 'linear-gradient(90deg, #ef4444, #f97316)' }} />
+                    <div className="flex justify-between items-center">
+                        <span className="text-xs font-bold text-1">Unlimited Access</span>
+                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-green-500/10 text-green-400 font-bold border border-green-500/20">FREE</span>
                     </div>
                 </div>
             )}
@@ -391,20 +379,19 @@ export default function DashboardLayout() {
                     {/* Right-aligned controls */}
                     <div className="flex items-center gap-2">
                         {/* Credits pill */}
-                        <button onClick={() => navigate('/subscription')}
-                            className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
+                        <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold"
                             style={{
                                 background: isDark ? 'rgba(124,58,237,0.1)' : 'rgba(124,58,237,0.05)',
                                 border: '1px solid var(--border-hi)',
                                 color: 'var(--purple)',
                                 boxShadow: isDark ? '0 2px 12px rgba(124,58,237,0.15)' : '0 2px 8px rgba(124,58,237,0.05)',
                             }}>
-                            <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'var(--purple)', boxShadow: `0 0 6px ${isDark ? 'rgba(168,85,247,0.9)' : 'rgba(124,58,237,0.4)'}` }} />
+                            <div className="w-1.5 h-1.5 rounded-full bg-green-500" style={{ boxShadow: '0 0 6px rgba(34,197,94,0.4)' }} />
                             <Sparkles size={11} />
-                            {aiCredits >= 1000 ? `${(aiCredits / 1000).toFixed(0)}k` : aiCredits} credits
-                        </button>
+                            Unlimited AI
+                        </div>
 
-                        <FinexaScorePill />
+                        <FinyxScorePill />
 
                         <ThemeToggle size="sm" />
 

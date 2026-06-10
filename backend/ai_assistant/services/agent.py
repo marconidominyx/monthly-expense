@@ -81,7 +81,7 @@ class Agent:
     def _call_llm_for_plan(self, prompt: str) -> str:
         model = genai.GenerativeModel(self.model)
         response = model.generate_content(
-            f"You are Finexa AI agent that chooses which tool to call.\n\n{prompt}",
+            f"You are Finyx AI agent that chooses which tool to call.\n\n{prompt}",
             generation_config=genai.types.GenerationConfig(
                 temperature=0.0,
                 max_output_tokens=300,

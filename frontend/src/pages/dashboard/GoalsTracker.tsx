@@ -197,7 +197,7 @@ function GoalCard({ goal, ai, onDelete, onUpdate, isDark }: { goal: Goal; ai?: G
                             <p className="text-[10px] text-green-400 mb-2 font-medium uppercase tracking-wide">Add money to this goal</p>
                             <div className="flex gap-2">
                                 <div className="relative flex-1">
-                                    <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs">₹</span>
+                                    <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs">₱</span>
                                     <input type="number" placeholder="Amount" className="input-field text-sm pl-6 w-full" min="0"
                                         value={savingsAmount} onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setSavingsAmount(v); }}
                                         onKeyDown={e => e.key === 'Enter' && handleAddSavings()} />
@@ -212,7 +212,7 @@ function GoalCard({ goal, ai, onDelete, onUpdate, isDark }: { goal: Goal; ai?: G
                                 {[1000, 5000, 10000, 25000].map(amt => (
                                     <button key={amt} onClick={() => setSavingsAmount(String(amt))}
                                         className={`text-[10px] px-2 py-1 rounded-md border transition-all ${+savingsAmount === amt ? 'border-green-500/30 bg-green-500/10 text-green-400' : 'border-slate-700 text-slate-500 hover:text-slate-300'}`}>
-                                        +₹{amt.toLocaleString('en-IN')}
+                                        +₱{amt.toLocaleString('en-PH')}
                                     </button>
                                 ))}
                             </div>
@@ -230,12 +230,12 @@ function GoalCard({ goal, ai, onDelete, onUpdate, isDark }: { goal: Goal; ai?: G
                             <p className="text-[10px] text-blue-400 mb-2 font-medium uppercase tracking-wide">Edit Goal Details</p>
                             <div className="grid grid-cols-2 gap-2">
                                 <div>
-                                    <label className="text-[10px] text-slate-500 mb-0.5 block">Target (₹)</label>
+                                    <label className="text-[10px] text-slate-500 mb-0.5 block">Target (₱)</label>
                                     <input type="number" className="input-field text-xs w-full" min="0" value={editForm.target_amount}
                                         onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setEditForm(f => ({ ...f, target_amount: v })); }} />
                                 </div>
                                 <div>
-                                    <label className="text-[10px] text-slate-500 mb-0.5 block">Monthly (₹)</label>
+                                    <label className="text-[10px] text-slate-500 mb-0.5 block">Monthly (₱)</label>
                                     <input type="number" className="input-field text-xs w-full" min="0" value={editForm.monthly_contribution}
                                         onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setEditForm(f => ({ ...f, monthly_contribution: v })); }} />
                                 </div>
@@ -854,19 +854,19 @@ export default function GoalsTracker() {
                                     </div>
                                     <div className="grid grid-cols-2 gap-3">
                                         <div>
-                                            <label className="text-xs text-slate-400 mb-1.5 block">Target Amount (₹)</label>
+                                            <label className="text-xs text-slate-400 mb-1.5 block">Target Amount (₱)</label>
                                             <input type="number" className="input-field text-sm" placeholder="500000" min="0"
                                                 value={form.targetAmount} onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setForm(f => ({ ...f, targetAmount: v })); }} />
                                         </div>
                                         <div>
-                                            <label className="text-xs text-slate-400 mb-1.5 block">Current Savings (₹)</label>
+                                            <label className="text-xs text-slate-400 mb-1.5 block">Current Savings (₱)</label>
                                             <input type="number" className="input-field text-sm" placeholder="0" min="0"
                                                 value={form.currentAmount} onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setForm(f => ({ ...f, currentAmount: v })); }} />
                                         </div>
                                     </div>
                                     <div className="grid grid-cols-2 gap-3">
                                         <div>
-                                            <label className="text-xs text-slate-400 mb-1.5 block">Monthly Contribution (₹)</label>
+                                            <label className="text-xs text-slate-400 mb-1.5 block">Monthly Contribution (₱)</label>
                                             <input type="number" className="input-field text-sm" placeholder="5000" min="0"
                                                 value={form.monthlyContribution} onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setForm(f => ({ ...f, monthlyContribution: v })); }} />
                                         </div>

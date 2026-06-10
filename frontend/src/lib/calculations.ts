@@ -144,12 +144,12 @@ export function detectSpendingPersonality(expenses: { name: string; amount: numb
     return { type: 'Lifestyle Spender', description: 'You prioritize experiences and comfort. Focus on needs vs. wants distinction.', color: '#f59e0b', icon: '✨' };
 }
 
-export function formatCurrency(amount: number, currency = '₹'): string {
-    if (amount >= 100000) return `${currency}${(amount / 100000).toFixed(1)}L`;
+export function formatCurrency(amount: number, currency = '₱'): string {
+    if (amount >= 1000000) return `${currency}${(amount / 1000000).toFixed(1)}M`;
     if (amount >= 1000) return `${currency}${(amount / 1000).toFixed(1)}k`;
-    return `${currency}${amount.toLocaleString('en-IN')}`;
+    return `${currency}${amount.toLocaleString('en-PH')}`;
 }
 
-export function formatFullCurrency(amount: number, currency = '₹'): string {
-    return `${currency}${amount.toLocaleString('en-IN')}`;
+export function formatFullCurrency(amount: number, currency = '₱'): string {
+    return `${currency}${amount.toLocaleString('en-PH')}`;
 }

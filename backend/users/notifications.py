@@ -20,7 +20,7 @@ def notify_welcome(user):
     """Welcome notification for new users after onboarding."""
     notify(
         user,
-        title='Welcome to Finexa! 🎉',
+        title='Welcome to Finyx! 🎉',
         message=f'Hi {user.first_name or user.username}, your financial dashboard is ready. Start by adding transactions or setting savings goals.',
         notification_type='system',
         link='/dashboard',
@@ -33,7 +33,7 @@ def notify_transaction(user, amount, category, tx_type):
     notify(
         user,
         title=f'Transaction Recorded',
-        message=f'You {verb} ₹{amount:,.0f} in {category}.',
+        message=f'You {verb} ₱{amount:,.0f} in {category}.',
         notification_type='transaction',
         link='/dashboard/transactions',
     )
@@ -44,7 +44,7 @@ def notify_goal_created(user, goal_title, target_amount):
     notify(
         user,
         title='New Goal Created 🎯',
-        message=f'"{goal_title}" with target ₹{target_amount:,.0f} has been created. Stay consistent!',
+        message=f'"{goal_title}" with target ₱{target_amount:,.0f} has been created. Stay consistent!',
         notification_type='goal',
         link='/dashboard/goals',
     )
@@ -77,7 +77,7 @@ def notify_wallet_deposit(user, amount):
     notify(
         user,
         title='Wallet Deposit',
-        message=f'₹{amount:,.0f} has been added to your wallet.',
+        message=f'₱{amount:,.0f} has been added to your wallet.',
         notification_type='wallet',
         link='/dashboard/wallet',
     )
@@ -88,7 +88,7 @@ def notify_wallet_withdrawal(user, amount):
     notify(
         user,
         title='Wallet Withdrawal',
-        message=f'₹{amount:,.0f} has been withdrawn from your wallet.',
+        message=f'₱{amount:,.0f} has been withdrawn from your wallet.',
         notification_type='wallet',
         link='/dashboard/wallet',
     )
@@ -101,7 +101,7 @@ def notify_budget_warning(user, category, spent, limit):
         notify(
             user,
             title=f'Budget Exceeded! ⚠️',
-            message=f'You\'ve exceeded your {category} budget (₹{spent:,.0f} / ₹{limit:,.0f}). Consider reducing spending.',
+            message=f'You\'ve exceeded your {category} budget (₱{spent:,.0f} / ₱{limit:,.0f}). Consider reducing spending.',
             notification_type='warning',
             link='/dashboard/budget',
         )
@@ -109,7 +109,7 @@ def notify_budget_warning(user, category, spent, limit):
         notify(
             user,
             title=f'Budget Alert',
-            message=f'You\'ve used {pct:.0f}% of your {category} budget (₹{spent:,.0f} / ₹{limit:,.0f}).',
+            message=f'You\'ve used {pct:.0f}% of your {category} budget (₱{spent:,.0f} / ₱{limit:,.0f}).',
             notification_type='warning',
             link='/dashboard/budget',
         )
@@ -120,7 +120,7 @@ def notify_low_balance(user, balance):
     notify(
         user,
         title='Low Wallet Balance ⚠️',
-        message=f'Your wallet balance is ₹{balance:,.0f}. Consider adding funds.',
+        message=f'Your wallet balance is ₱{balance:,.0f}. Consider adding funds.',
         notification_type='warning',
         link='/dashboard/wallet',
     )
@@ -131,7 +131,7 @@ def notify_onboarding_complete(user):
     notify(
         user,
         title='Profile Setup Complete ✅',
-        message='Your financial profile is set up. Finexa AI can now give you personalized insights!',
+        message='Your financial profile is set up. Finyx AI can now give you personalized insights!',
         notification_type='success',
         link='/dashboard',
     )

@@ -13,7 +13,7 @@ def generate_saving_suggestions(expense_data: dict) -> dict:
     Generate saving insights based on structured expense JSON.
     """
     system_prompt = """
-    You are Finexa AI, a financial planning assistant.
+    You are Finyx AI, a financial planning assistant.
     Based on the user's expense history, provide smart and practical suggestions
     to help reduce expenses and increase savings.
 

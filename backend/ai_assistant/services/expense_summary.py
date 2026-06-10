@@ -15,7 +15,7 @@ def summarize_expenses_from_data(data: dict) -> dict:
     """
 
     system_prompt = """
-    You are Finexa AI, an expert financial analysis model.
+    You are Finyx AI, an expert financial analysis model.
 
     Given the structured expenses and metadata JSON,
     produce insights in the following JSON format only:
@@ -24,7 +24,7 @@ def summarize_expenses_from_data(data: dict) -> dict:
       "total_amount": number,
       "record_count": number,
       "biggest_category": "string",
-      "currency": "INR",
+      "currency": "PHP",
       "top_merchants": ["string"],
       "suggestions": ["string"]
     }

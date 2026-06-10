@@ -115,13 +115,13 @@ def analyze_goal_plan(user, refresh=False):
     prompt = f"""You are an expert financial planner AI. Analyze the user's financial situation and goals.
 
 USER FINANCIAL CONTEXT:
-- Monthly Income: ₹{ctx['monthly_income']:,.0f}
-- Monthly Expenses: ₹{ctx['monthly_expense']:,.0f}
-- Disposable Income: ₹{ctx['disposable_income']:,.0f}
-- Wallet Balance: ₹{ctx['wallet_balance']:,.0f}
+- Monthly Income: ₱{ctx['monthly_income']:,.0f}
+- Monthly Expenses: ₱{ctx['monthly_expense']:,.0f}
+- Disposable Income: ₱{ctx['disposable_income']:,.0f}
+- Wallet Balance: ₱{ctx['wallet_balance']:,.0f}
 - Financial Health Score: {ctx['health_score']}/100
 - Monthly spending by category: {json.dumps(ctx['category_spending'])}
-- Total committed to goals: ₹{ctx['total_goals_contribution']:,.0f}/month
+- Total committed to goals: ₱{ctx['total_goals_contribution']:,.0f}/month
 
 USER'S GOALS:
 {json.dumps(ctx['goals'], indent=2)}
@@ -210,7 +210,7 @@ RULES:
 - Keep investment suggestions general, risk-aware, and educational
 - Include disclaimers where appropriate
 - Be encouraging but realistic
-- All monetary values in INR
+- All monetary values in PHP (Philippine Pesos)
 - For short-term goals (0-2yr): suggest RD, high-interest savings, short-term debt funds
 - For medium-term (2-5yr): suggest balanced funds, conservative hybrid, SIP in diversified funds
 - For long-term (5+yr): suggest SIP in equity mutual funds, index funds, hybrid growth funds

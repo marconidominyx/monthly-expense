@@ -100,8 +100,8 @@ export default function Onboarding() {
             >
                 {/* Logo */}
                 <div className="flex items-center gap-3 mb-6 justify-center">
-                    <img src="/logo.png" alt="Finexa" className="w-10 h-10 rounded-xl object-contain" />
-                    <span className="font-bold text-2xl" style={{ color: isDark ? '#fff' : '#0f172a' }}>Finexa</span>
+                    <img src="/logo.png" alt="Finyx" className="w-10 h-10 rounded-xl object-contain" />
+                    <span className="font-bold text-2xl" style={{ color: isDark ? '#fff' : '#0f172a' }}>Finyx</span>
                 </div>
 
                 {/* Progress bar */}
@@ -150,9 +150,9 @@ export default function Onboarding() {
                                             value={lastName} onChange={e => setLastName(e.target.value)} />
                                     </div>
                                     <div>
-                                        <label className={`text-xs mb-1.5 block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Monthly Income (₹) *</label>
+                                        <label className={`text-xs mb-1.5 block ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Monthly Income (₱) *</label>
                                         <div className="relative">
-                                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">₹</span>
+                                            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">₱</span>
                                             <input type="number" className="input-field text-sm w-full pl-7" placeholder="e.g. 50000" min="0"
                                                 value={income} onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setIncome(v); }} />
                                         </div>
@@ -218,7 +218,7 @@ export default function Onboarding() {
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-2">
                                                     <div className="relative">
-                                                        <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs">₹</span>
+                                                        <span className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs">₱</span>
                                                         <input type="number" className="input-field text-xs w-full pl-6"
                                                             placeholder="Amount" min="0" value={entry.amount}
                                                             onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) updateSpending(idx, 'amount', v); }} />
@@ -277,16 +277,16 @@ export default function Onboarding() {
                                     <div className="grid grid-cols-3 gap-3">
                                         <div className="p-3 rounded-xl text-center" style={{ background: isDark ? 'rgba(16,185,129,0.06)' : 'rgba(16,185,129,0.08)', border: `1px solid ${isDark ? 'rgba(16,185,129,0.12)' : 'rgba(16,185,129,0.2)'}` }}>
                                             <p className={`text-[10px] mb-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Income</p>
-                                            <p className={`font-bold text-sm ${isDark ? 'text-green-400' : 'text-green-600'}`}>₹{(+income || 0).toLocaleString('en-IN')}</p>
+                                            <p className={`font-bold text-sm ${isDark ? 'text-green-400' : 'text-green-600'}`}>₱{(+income || 0).toLocaleString('en-PH')}</p>
                                         </div>
                                         <div className="p-3 rounded-xl text-center" style={{ background: isDark ? 'rgba(239,68,68,0.06)' : 'rgba(239,68,68,0.08)', border: `1px solid ${isDark ? 'rgba(239,68,68,0.12)' : 'rgba(239,68,68,0.2)'}` }}>
                                             <p className={`text-[10px] mb-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Expenses</p>
-                                            <p className={`font-bold text-sm ${isDark ? 'text-red-400' : 'text-red-600'}`}>₹{totalSpending.toLocaleString('en-IN')}</p>
+                                            <p className={`font-bold text-sm ${isDark ? 'text-red-400' : 'text-red-600'}`}>₱{totalSpending.toLocaleString('en-PH')}</p>
                                         </div>
                                         <div className="p-3 rounded-xl text-center" style={{ background: savings >= 0 ? (isDark ? 'rgba(59,130,246,0.06)' : 'rgba(59,130,246,0.08)') : (isDark ? 'rgba(239,68,68,0.06)' : 'rgba(239,68,68,0.08)'), border: `1px solid ${savings >= 0 ? (isDark ? 'rgba(59,130,246,0.12)' : 'rgba(59,130,246,0.2)') : (isDark ? 'rgba(239,68,68,0.12)' : 'rgba(239,68,68,0.2)')}` }}>
                                             <p className={`text-[10px] mb-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Savings</p>
                                             <p className={`font-bold text-sm ${savings >= 0 ? (isDark ? 'text-blue-400' : 'text-blue-600') : (isDark ? 'text-red-400' : 'text-red-600')}`}>
-                                                ₹{savings.toLocaleString('en-IN')}
+                                                ₱{savings.toLocaleString('en-PH')}
                                             </p>
                                         </div>
                                     </div>
@@ -304,7 +304,7 @@ export default function Onboarding() {
                                                                 <CatIcon size={12} style={{ color: cat?.color }} />
                                                                 <span className={`text-xs ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>{cat?.label || s.category}</span>
                                                             </div>
-                                                            <span className={`text-xs font-medium ${isDark ? 'text-white' : 'text-slate-900'}`}>₹{(+s.amount).toLocaleString('en-IN')}</span>
+                                                            <span className={`text-xs font-medium ${isDark ? 'text-white' : 'text-slate-900'}`}>₱{(+s.amount).toLocaleString('en-PH')}</span>
                                                         </div>
                                                     );
                                                 })}

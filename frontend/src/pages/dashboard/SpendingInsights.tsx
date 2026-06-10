@@ -25,7 +25,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
         <div className="card-glow p-3 text-xs" style={{ background: 'rgba(15,15,30,0.95)', backdropFilter: 'blur(12px)' }}>
             <p className="font-medium" style={{ color: '#fff' }}>{payload[0]?.name || payload[0]?.payload?.name}</p>
-            <p className="text-purple-400">₹{payload[0]?.value?.toLocaleString()}</p>
+            <p className="text-purple-400">₱{payload[0]?.value?.toLocaleString()}</p>
         </div>
     );
 };
@@ -271,7 +271,7 @@ export default function SpendingInsights() {
                     <h3 className="font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>Actual vs Budget</h3>
                     <ResponsiveContainer width="100%" height={220}>
                         <BarChart data={currentExpenses} layout="vertical" margin={{ left: -10 }}>
-                            <XAxis type="number" stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
+                            <XAxis type="number" stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₱${(v / 1000).toFixed(0)}k`} />
                             <YAxis type="category" dataKey="name" stroke="#475569" tick={{ fontSize: 10 }} width={70} />
                             <Tooltip content={<CustomTooltip />} />
                             <Bar dataKey="budget" fill="rgba(168,85,247,0.15)" radius={[0, 4, 4, 0]} name="Budget" />

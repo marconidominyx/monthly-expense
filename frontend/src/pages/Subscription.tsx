@@ -188,7 +188,7 @@ export default function Subscription() {
 
                                             {/* Price */}
                                             <div className="mb-1 flex items-end gap-1.5">
-                                                <span className="font-display font-black text-1" style={{ fontSize: '2.6rem', lineHeight: 1 }}>₹{p.price}</span>
+                                                <span className="font-display font-black text-1" style={{ fontSize: '2.6rem', lineHeight: 1 }}>₱{p.price}</span>
                                             </div>
                                             <p className="text-[11px] mb-0.5 text-3" style={{ opacity: 0.8 }}>one-time · no recurring fees</p>
 
@@ -263,7 +263,7 @@ export default function Subscription() {
                                         <p className="text-xs mt-0.5 text-3" style={{ opacity: 0.7 }}>{plan.per}</p>
                                     </div>
                                     <div className="text-right">
-                                        <p className="font-display font-black text-1 text-2xl">₹{plan.price}</p>
+                                        <p className="font-display font-black text-1 text-2xl">₱{plan.price}</p>
                                         <p className="text-xs text-3" style={{ opacity: 0.7 }}>one-time</p>
                                     </div>
                                 </div>
@@ -305,7 +305,7 @@ export default function Subscription() {
                                     </span>
                                 ) : (
                                     <span className="flex items-center justify-center gap-2">
-                                        Pay ₹{plan.price} <ArrowRight size={15} />
+                                        Pay ₱{plan.price} <ArrowRight size={15} />
                                     </span>
                                 )}
                             </motion.button>
@@ -385,7 +385,7 @@ export default function Subscription() {
                                         <div className="flex items-center justify-between py-3"
                                             style={{ borderBottom: '1px solid var(--border)' }}>
                                             <span className="text-xs text-3" style={{ opacity: 0.8 }}>Amount charged</span>
-                                            <span className="text-sm font-semibold text-1">₹{plan.price}</span>
+                                            <span className="text-sm font-semibold text-1">₱{plan.price}</span>
                                         </div>
                                         {/* Delivery row */}
                                         <div className="flex items-center justify-between py-3">

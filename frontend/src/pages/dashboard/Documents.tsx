@@ -197,7 +197,7 @@ export default function Documents() {
                                     <div className="flex-1 min-w-0">
                                         <p className="text-sm font-medium truncate" style={{ color: 'var(--text-primary)' }}>{doc.name}</p>
                                         <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-                                            {new Date(doc.uploaded_at).toLocaleDateString('en-IN')}
+                                            {new Date(doc.uploaded_at).toLocaleDateString('en-PH')}
                                         </p>
                                     </div>
                                     <ChevronRight size={15} style={{ color: 'var(--text-muted)' }} />
@@ -217,7 +217,7 @@ export default function Documents() {
                             <div className="flex items-center gap-4 text-xs" style={{ color: 'var(--text-muted)' }}>
                                 <span className="flex items-center gap-1">
                                     <Calendar size={12} />
-                                    Uploaded {new Date(activeDoc.uploaded_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                                    Uploaded {new Date(activeDoc.uploaded_at).toLocaleDateString('en-PH', { day: 'numeric', month: 'short', year: 'numeric' })}
                                 </span>
                                 {activeDoc.mongo_id && (
                                     <span className="px-2 py-0.5 rounded-full" style={{ background: 'rgba(16,185,129,0.1)', color: '#10b981', border: '1px solid rgba(16,185,129,0.2)' }}>
@@ -240,7 +240,7 @@ export default function Documents() {
                                             const obj = JSON.parse(cleaned);
                                             if (typeof obj === 'object' && obj !== null) {
                                                 const parts: string[] = [];
-                                                if (obj.total_amount) parts.push(`Total Amount: ₹${Number(obj.total_amount).toLocaleString('en-IN')}`);
+                                                if (obj.total_amount) parts.push(`Total Amount: ₱${Number(obj.total_amount).toLocaleString('en-PH')}`);
                                                 if (obj.record_count) parts.push(`Records: ${obj.record_count}`);
                                                 if (obj.biggest_category) parts.push(`Biggest Category: ${obj.biggest_category}`);
                                                 if (obj.currency) parts.push(`Currency: ${obj.currency}`);

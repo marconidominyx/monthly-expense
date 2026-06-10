@@ -17,8 +17,8 @@ def simulate_financial_impact(scenario_type: str, amount: float, current_score: 
 
     # Mock User Data (In real app, fetch from DB)
     mock_active_loans = """
-    1. Personal Loan: ₹2,00,000 | EMI: ₹5,500 | Tenure: 24m | Paid: 12 | Remaining: 12 | Status: PAID
-    2. Credit Card: ₹50,000 Limit | Utilized: ₹15,000 | Status: PAID
+    1. Personal Loan: ₱200,000 | EMI: ₱5,500 | Tenure: 24m | Paid: 12 | Remaining: 12 | Status: PAID
+    2. Credit Card: ₱50,000 Limit | Utilized: ₱15,000 | Status: PAID
     """
     
     mock_payment_history = "Last 6 months: ALL PAID ON TIME"
@@ -26,11 +26,11 @@ def simulate_financial_impact(scenario_type: str, amount: float, current_score: 
     details_str = "\n".join([f"    {k.replace('_', ' ').title()}: {v}" for k, v in scenario_details.items() if v])
 
     system_prompt = """
-    You are Finexa AI, an autonomous credit intelligence and financial risk analysis agent.
+    You are Finyx AI, an autonomous credit intelligence and financial risk analysis agent.
     Your role is to act like a senior credit analyst. You must analyze the user’s data + PROPOSED SCENARIO to predict credit score movement.
 
     User Credit Profile:
-    Current Finexa Score: {current_score}
+    Current Finyx Score: {current_score}
 
     Active Loans:
     {mock_active_loans}
@@ -41,7 +41,7 @@ def simulate_financial_impact(scenario_type: str, amount: float, current_score: 
     ==================================================
     PROPOSED USER SCENARIO (What they want to do):
     Type: {scenario_type}
-    Amount: ₹{amount}
+    Amount: ₱{amount}
     {details_str}
     ==================================================
 
@@ -136,10 +136,10 @@ def analyze_credit_health(loans: list, current_score: int) -> dict:
         loans_str = "No active loans reported."
     else:
         for idx, loan in enumerate(loans, 1):
-            loans_str += f"{idx}. {loan.get('type', 'Unknown')}: Principal ₹{loan.get('principal', 0)} | EMI: ₹{loan.get('emi', 0)} | Tenure: {loan.get('tenure', 0)}m | Status: {loan.get('missed_emis', '0')} missed\n"
+            loans_str += f"{idx}. {loan.get('type', 'Unknown')}: Principal ₱{loan.get('principal', 0)} | EMI: ₱{loan.get('emi', 0)} | Tenure: {loan.get('tenure', 0)}m | Status: {loan.get('missed_emis', '0')} missed\n"
 
     system_prompt = """
-    You are Finexa AI, a Senior Credit Analyst.
+    You are Finyx AI, a Senior Credit Analyst.
     Analyze the user's REAL loan portfolio to determine credit health and future score trend.
 
     User Profile:

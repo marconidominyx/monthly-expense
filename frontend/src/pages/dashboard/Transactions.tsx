@@ -122,7 +122,7 @@ export default function Transactions() {
                             </div>
                             <span className="text-xs font-medium" style={{ color: 'var(--text-muted)' }}>{s.label}</span>
                         </div>
-                        <p className="font-bold text-2xl" style={{ color: s.color }}>₹{Math.abs(s.value).toLocaleString('en-IN')}</p>
+                        <p className="font-bold text-2xl" style={{ color: s.color }}>₱{Math.abs(s.value).toLocaleString('en-PH')}</p>
                     </motion.div>
                 ))}
             </div>
@@ -135,7 +135,7 @@ export default function Transactions() {
                     <h3 className="font-semibold mb-4" style={{ color: 'var(--text-primary)' }}>New Transaction</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-4">
                         <div>
-                            <label className="text-xs mb-1 block" style={{ color: 'var(--text-muted)' }}>Amount (₹)</label>
+                            <label className="text-xs mb-1 block" style={{ color: 'var(--text-muted)' }}>Amount (₱)</label>
                             <input type="number" className="field text-sm" placeholder="0" min="0" value={form.amount}
                                 onChange={e => { const v = e.target.value; if (v === '' || Number(v) >= 0) setForm(f => ({ ...f, amount: v })); }} />
                         </div>
@@ -253,7 +253,7 @@ export default function Transactions() {
                                 </div>
                             </div>
                             <p className="font-bold" style={{ color: tx.type === 'income' ? '#10b981' : '#ef4444' }}>
-                                {tx.type === 'income' ? '+' : '-'}₹{(typeof tx.amount === 'number' ? tx.amount : parseFloat(String(tx.amount)) || 0).toLocaleString('en-IN')}
+                                {tx.type === 'income' ? '+' : '-'}₱{(typeof tx.amount === 'number' ? tx.amount : parseFloat(String(tx.amount)) || 0).toLocaleString('en-PH')}
                             </p>
                         </motion.div>
                     ))}

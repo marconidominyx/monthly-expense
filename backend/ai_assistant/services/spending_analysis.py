@@ -45,12 +45,12 @@ def analyze_user_spending(user):
         }
 
     for t in manual_txns:
-        txn_summary += f"- {t.date.strftime('%Y-%m-%d')}: {t.type.upper()} ({t.category}) ₹{t.amount}\n"
+        txn_summary += f"- {t.date.strftime('%Y-%m-%d')}: {t.type.upper()} ({t.category}) ₱{t.amount}\n"
         
     for t in wallet_txns:
         t_type = t.transaction_type
         desc = t.description or "Wallet txn"
-        txn_summary += f"- {t.timestamp.strftime('%Y-%m-%d')}: WALLET {t_type} - {desc} ₹{t.amount}\n"
+        txn_summary += f"- {t.timestamp.strftime('%Y-%m-%d')}: WALLET {t_type} - {desc} ₱{t.amount}\n"
         
     # 2. Prompt Gemini
     system_prompt = """

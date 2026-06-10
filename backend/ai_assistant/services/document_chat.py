@@ -61,7 +61,7 @@ def chat_with_document(
     if not content.strip():
         return "No document content available. Please upload a document first."
     
-    system_prompt = """You are Finexa AI, a professional financial assistant.
+    system_prompt = """You are Finyx AI, a professional financial assistant.
 Answer ONLY in exactly 2 lines, clear and concise.
 Be specific with data from the document when possible.
 Tone: Professional, helpful, and accurate.

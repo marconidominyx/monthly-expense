@@ -103,7 +103,7 @@ export default function IncomeSimulator() {
                             style={{ background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.15)' }}>
                             <div>
                                 <p className="text-white text-sm font-medium">Simulate Total Job Loss</p>
-                                <p className="text-slate-500 text-xs">Income drops to ₹0</p>
+                                <p className="text-slate-500 text-xs">Income drops to ₱0</p>
                             </div>
                             <button onClick={() => setJobLoss(!jobLoss)}
                                 className={`w-12 h-6 rounded-full transition-all duration-300 relative ${jobLoss ? 'bg-red-500' : 'bg-slate-700'}`}>
@@ -174,7 +174,7 @@ export default function IncomeSimulator() {
                         { name: 'Monthly Deficit', value: result.monthlyShortfall, color: '#f59e0b' },
                     ]}>
                         <XAxis dataKey="name" stroke="#475569" tick={{ fontSize: 10 }} />
-                        <YAxis stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
+                        <YAxis stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₱${(v / 1000).toFixed(0)}k`} />
                         <Tooltip content={<CustomTooltip />} />
                         <ReferenceLine y={0} stroke="#475569" />
                         <Bar dataKey="value" radius={[6, 6, 0, 0]}>

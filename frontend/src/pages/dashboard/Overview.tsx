@@ -423,7 +423,7 @@ export default function Overview() {
                                 </linearGradient>
                             </defs>
                             <XAxis dataKey="month" stroke="#475569" tick={{ fontSize: 11 }} />
-                            <YAxis stroke="#475569" tick={{ fontSize: 11 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
+                            <YAxis stroke="#475569" tick={{ fontSize: 11 }} tickFormatter={v => `₱${(v / 1000).toFixed(0)}k`} />
                             <Tooltip content={<CustomTooltip />} />
                             <Area type="monotone" dataKey="income" stroke="#10b981" fill="url(#incGrad)" strokeWidth={2} />
                             <Area type="monotone" dataKey="expenses" stroke="#ef4444" fill="url(#expGrad)" strokeWidth={2} />
@@ -454,7 +454,7 @@ export default function Overview() {
                                     <span className="text-lg">{cat.icon}</span>
                                     <div>
                                         <p className={`text-sm font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{cat.name}</p>
-                                        <p className="text-[11px] text-red-400 font-medium">₹{(cat.amount - cat.budget).toLocaleString()} over budget</p>
+                                        <p className="text-[11px] text-red-400 font-medium">₱{(cat.amount - cat.budget).toLocaleString()} over budget</p>
                                     </div>
                                 </div>
                                 <div className="text-right">
@@ -475,7 +475,7 @@ export default function Overview() {
                     </div>
                     <div>
                         <h2 className={`font-bold text-lg tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>AI Spending Insights</h2>
-                        <p className={`text-[10px] font-bold uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Powered by Finexa Intelligence</p>
+                        <p className={`text-[10px] font-bold uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Powered by Finyx Intelligence</p>
                     </div>
                 </div>
                 <button onClick={() => loadAIAnalysis(true)} disabled={aiLoading}

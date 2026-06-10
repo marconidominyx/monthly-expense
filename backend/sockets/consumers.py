@@ -2,7 +2,7 @@
 import asyncio
 from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from asgiref.sync import sync_to_async
-from backend.core.hey import GEMINI_API_KEY
+from core.settings import GEMINI_API_KEY
 from ai_assistant.services.document_chat import chat_with_document
 from ai_assistant.models import ChatSession, ChatMessage
 from django.contrib.auth.models import AnonymousUser
@@ -193,11 +193,5 @@ class DocumentChatConsumer(AsyncJsonWebsocketConsumer):
         return session
 
     def _deduct_chat_credits(self, user_id):
-        from django.contrib.auth import get_user_model
-        User = get_user_model()
-        user = User.objects.get(id=user_id)
-        if user.credits < 2:
-            raise ValueError("Insufficient credits (Required: 2)")
-        user.credits -= 2
-        user.save()
+        # Free version - bypass credits
         return True

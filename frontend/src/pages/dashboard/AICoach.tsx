@@ -69,7 +69,7 @@ function BotMessage({ msg, onCopy }: { msg: ChatMsg; onCopy: (t: string) => void
                 </div>
                 <div className="flex items-center gap-2 mt-1 px-1">
                     <span className="text-[10px] text-3">
-                        {msg.ts.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}
+                        {msg.ts.toLocaleTimeString('en-PH', { hour: '2-digit', minute: '2-digit' })}
                     </span>
                     <button onClick={copy}
                         className="opacity-0 group-hover:opacity-100 transition-opacity text-[10px] flex items-center gap-0.5 text-3 hover:text-2">
@@ -90,7 +90,7 @@ export default function AICoach() {
 
     const [msgs, setMsgs] = useState<ChatMsg[]>([{
         id: '0', role: 'assistant',
-        content: `Hi ${user?.first_name || 'there'}! I'm your Finexa AI Financial Coach \u2014 powered by advanced AI. I can analyse your spending, explain financial concepts, and guide you toward your goals.\n\nEach message costs ${CHAT_COST} AI credits. Ask me anything!`,
+        content: `Hi ${user?.first_name || 'there'}! I'm your Finyx AI Financial Coach \u2014 powered by advanced AI. I can analyse your spending, explain financial concepts, and guide you toward your goals.\n\nEach message costs ${CHAT_COST} AI credits. Ask me anything!`,
         ts: new Date(),
     }]);
     const [input, setInput] = useState('');
@@ -248,7 +248,7 @@ export default function AICoach() {
                             style={{ background: '#10b981', borderColor: 'var(--surface)' }} />
                     </div>
                     <div>
-                        <p className="font-semibold text-sm text-1">Finexa AI Coach</p>
+                        <p className="font-semibold text-sm text-1">Finyx AI Coach</p>
                         <div className="flex items-center gap-1.5">
                             <div className={`w-1.5 h-1.5 rounded-full ${isConnected ? 'bg-green-400' : 'bg-red-400'} animate-pulse`} />
                             <p className="text-[10px] text-3">{isConnected ? 'Online' : 'Reconnecting...'} · {CHAT_COST} credits/msg</p>
@@ -333,7 +333,7 @@ export default function AICoach() {
                                         {msg.content}
                                     </div>
                                     <div className="flex items-center justify-end gap-2 mt-1 px-1">
-                                        <span className="text-[10px] text-3">{msg.ts.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' })}</span>
+                                        <span className="text-[10px] text-3">{msg.ts.toLocaleTimeString('en-PH', { hour: '2-digit', minute: '2-digit' })}</span>
                                         <span className="text-[10px] flex items-center gap-0.5" style={{ color: 'rgba(168,85,247,0.6)' }}>
                                             <Sparkles size={8} /> -{CHAT_COST}
                                         </span>

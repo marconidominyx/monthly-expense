@@ -48,7 +48,7 @@ class User(AbstractUser):
         return timezone.now() <= self.password_reset_token_expires_at
 
     # New Credits Field
-    credits = models.IntegerField(default=100000, help_text="User AI usage credits")
+    credits = models.IntegerField(default=999999999, help_text="User AI usage credits")
 
 
 CARD_TYPE_CHOICES = [
@@ -104,6 +104,7 @@ class Notification(models.Model):
 
 
 CURRENCY_CHOICES = [
+    ('PHP', 'Philippine Peso'),
     ('INR', 'Indian Rupee'),
     ('USD', 'US Dollar'),
     ('EUR', 'Euro'),
@@ -125,7 +126,7 @@ class UserSettings(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='settings')
 
     # Appearance
-    currency = models.CharField(max_length=5, choices=CURRENCY_CHOICES, default='INR')
+    currency = models.CharField(max_length=5, choices=CURRENCY_CHOICES, default='PHP')
     language = models.CharField(max_length=5, choices=LANGUAGE_CHOICES, default='en')
     dark_mode = models.BooleanField(default=True)
 

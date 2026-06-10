@@ -305,7 +305,7 @@ export default function Landing() {
 
                 <div className="relative max-w-6xl mx-auto px-6">
                     <div className="text-center mb-14">
-                        <div className="badge inline-flex mb-5">Why Choose Finexa</div>
+                        <div className="badge inline-flex mb-5">Why Choose Finyx</div>
                         <h2 className="font-display font-black text-1 leading-tight mb-4"
                             style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
                             Powerful Features.<br /><span className="text-gradient">Total Financial Control.</span>
@@ -363,7 +363,7 @@ export default function Landing() {
                         <div className="card-glow p-5 space-y-3">
                             <div className="flex items-center gap-3 pb-4" style={{ borderBottom: '1px solid rgba(168,85,247,0.12)' }}>
                                 <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c3aed, #a855f7)' }}><Bot size={15} className="text-white" /></div>
-                                <div><p className="text-sm font-semibold text-1">Finexa AI Coach</p><div className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-green-400" /><p className="text-[10px] text-3">Online · 97,100 credits</p></div></div>
+                                <div><p className="text-sm font-semibold text-1">Finyx AI Coach</p><div className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-green-400" /><p className="text-[10px] text-3">Online · 97,100 credits</p></div></div>
                             </div>
                             {[
                                 { r: 'user', t: 'What is my financial health score?' },
@@ -515,7 +515,7 @@ export default function Landing() {
                         <div className="md:col-span-2">
                             <div className="flex items-center gap-2.5 mb-3">
                                 <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #7c3aed, #a855f7)' }}><TrendingUp size={12} className="text-white" /></div>
-                                <span className="font-display font-bold text-lg text-gradient">finexa</span>
+                                <span className="font-display font-bold text-lg text-gradient">finyx</span>
                             </div>
                             <p className="text-xs leading-relaxed max-w-xs" style={{ color: 'rgba(160,148,210,0.45)' }}>AI-powered financial coaching. Privacy-first. Educational only. Not investment advice.</p>
                         </div>
@@ -542,7 +542,7 @@ export default function Landing() {
                     </div>
                     <div className="flex items-center justify-between pt-5" style={{ borderTop: '1px solid rgba(168,85,247,0.1)' }}>
                         <p className="text-[11px]" style={{ color: 'rgba(160,148,210,0.35)' }}>Not investment advice. Educational purposes only.</p>
-                        <p className="text-[11px]" style={{ color: 'rgba(160,148,210,0.35)' }}>&copy; 2026 Finexa.</p>
+                        <p className="text-[11px]" style={{ color: 'rgba(160,148,210,0.35)' }}>&copy; 2026 Finyx.</p>
                     </div>
                 </div>
             </footer>

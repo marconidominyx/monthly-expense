@@ -6,7 +6,7 @@ import { TransactionsAPI, AIAPI } from '../../lib/api';
 import { useAuth } from '../../contexts/AuthContext';
 import { useTheme } from '../../contexts/ThemeContext';
 
-const fmt = (n: number) => `₹${Math.round(n).toLocaleString('en-IN')}`;
+const fmt = (n: number) => `₱${Math.round(n).toLocaleString('en-PH')}`;
 
 const NEEDS_CATS = new Set([
     'Food', 'Food & Dining', 'Groceries', 'Rent', 'Housing',
@@ -212,7 +212,7 @@ export default function BudgetOptimizer() {
                 <ResponsiveContainer width="100%" height={140}>
                     <BarChart data={actual.map((a, i) => ({ ...a, ideal: ideal[i].value }))} barCategoryGap={30}>
                         <XAxis dataKey="name" stroke="#475569" tick={{ fontSize: 11 }} />
-                        <YAxis stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₹${(v / 1000).toFixed(0)}k`} />
+                        <YAxis stroke="#475569" tick={{ fontSize: 10 }} tickFormatter={v => `₱${(v / 1000).toFixed(0)}k`} />
                         <Tooltip content={<CustomTooltip isDark={isDark} />} />
                         <Bar dataKey="ideal" name="Ideal" fill="rgba(168,85,247,0.2)" radius={[4, 4, 0, 0]} />
                         <Bar dataKey="value" name="Actual" radius={[4, 4, 0, 0]}>
@@ -254,7 +254,7 @@ export default function BudgetOptimizer() {
                                 className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
                                 style={{ background: `linear-gradient(to right, #a855f7 0%, #a855f7 ${((Math.min(reduceAmount, sliderMax) - 100) / (sliderMax - 100)) * 100}%, rgba(168,85,247,0.2) ${((Math.min(reduceAmount, sliderMax) - 100) / (sliderMax - 100)) * 100}%, rgba(168,85,247,0.2) 100%)` }} />
                             <div className="flex justify-between text-xs mt-1" style={{ color: 'var(--text-muted)', opacity: 0.6 }}>
-                                <span>₹100</span><span>{fmt(sliderMax)}</span>
+                                <span>₱100</span><span>{fmt(sliderMax)}</span>
                             </div>
                         </div>
                     </div>
@@ -315,7 +315,7 @@ export default function BudgetOptimizer() {
                                         )}
                                         {tip.save_per_month > 0 && (
                                             <span className="text-[10px] px-2 py-0.5 rounded-full bg-green-500/15 text-green-400 flex items-center gap-1">
-                                                <IndianRupee size={9} />{tip.save_per_month.toLocaleString('en-IN')}/mo
+                                                <IndianRupee size={9} />{tip.save_per_month.toLocaleString('en-PH')}/mo
                                             </span>
                                         )}
                                     </div>

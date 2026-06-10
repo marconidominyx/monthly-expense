@@ -135,7 +135,7 @@ export default function Subscription() {
                     return (
                         <motion.div key={plan.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}
                             className={`glass relative flex flex-col ${plan.popular ? 'ring-1' : ''}`}
-                            style={plan.popular ? { ringColor: plan.color } : {}}>
+                            style={plan.popular ? { '--tw-ring-color': plan.color } as React.CSSProperties : {}}>
 
                             {plan.popular && (
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -165,12 +165,12 @@ export default function Subscription() {
                                 <div className="mb-5">
                                     <div className="flex items-end gap-1">
                                         <span className="text-3xl font-bold font-display" style={{ color: 'var(--text-primary)' }}>
-                                            {price === 0 ? 'Free' : `₹${price}`}
+                                            {price === 0 ? 'Free' : `₱${price}`}
                                         </span>
                                         {price > 0 && <span className="text-sm pb-1" style={{ color: 'var(--text-muted)' }}>{plan.period}</span>}
                                     </div>
                                     {billing === 'yearly' && price > 0 && (
-                                        <p className="text-xs text-green-400 mt-0.5">Save ₹{(plan.price - price) * 12}/year</p>
+                                        <p className="text-xs text-green-400 mt-0.5">Save ₱{(plan.price - price) * 12}/year</p>
                                     )}
                                 </div>
 

@@ -213,7 +213,7 @@ export default function Settings() {
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'finexa-data-export.json';
+            a.download = 'finyx-data-export.json';
             a.click();
             URL.revokeObjectURL(url);
             showSaved('Data exported successfully');
@@ -371,7 +371,7 @@ export default function Settings() {
                                 <h3 className="font-semibold text-1 mb-4 pb-3" style={{ borderBottom: '1px solid var(--border)' }}>Privacy & Security</h3>
                                 {[
                                     { key: 'showBalance', label: 'Show Balance on Dashboard', desc: 'Display your balance on the overview card' },
-                                    { key: 'analyticsSharing', label: 'Usage Analytics', desc: 'Help improve Finexa with anonymous usage data' },
+                                    { key: 'analyticsSharing', label: 'Usage Analytics', desc: 'Help improve Finyx with anonymous usage data' },
                                     { key: 'crashReports', label: 'Crash Reports', desc: 'Automatically send error reports to improve stability' },
                                 ].map(p => (
                                     <SettingRow key={p.key} label={p.label} desc={p.desc} compact>
@@ -455,9 +455,9 @@ export default function Settings() {
                                 <div className="card p-5">
                                     <h3 className="font-semibold text-1 mb-4 pb-3" style={{ borderBottom: '1px solid var(--border)' }}>Financial Data Summary</h3>
                                     {[
-                                        { label: 'Monthly Income', value: `Rs ${monthlyIncome.toLocaleString('en-IN')}` },
-                                        { label: 'Monthly Expenses', value: `Rs ${monthlyExpenses.toLocaleString('en-IN')}` },
-                                        { label: 'Emergency Savings', value: `Rs ${emergencySavings.toLocaleString('en-IN')}` },
+                                        { label: 'Monthly Income', value: `Rs ${monthlyIncome.toLocaleString('en-PH')}` },
+                                        { label: 'Monthly Expenses', value: `Rs ${monthlyExpenses.toLocaleString('en-PH')}` },
+                                        { label: 'Emergency Savings', value: `Rs ${emergencySavings.toLocaleString('en-PH')}` },
                                         { label: 'AI Credits Remaining', value: aiCredits.toLocaleString() },
                                     ].map(s => (
                                         <SettingRow key={s.label} label={s.label} compact>
@@ -480,7 +480,7 @@ export default function Settings() {
                                         <button onClick={() => { logout(); navigate('/'); }}
                                             className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all"
                                             style={{ background: 'rgba(239,68,68,0.04)', border: '1px solid rgba(239,68,68,0.15)', color: 'rgba(239,68,68,0.7)' }}>
-                                            <LogOut size={15} /> Sign out of Finexa
+                                            <LogOut size={15} /> Sign out of Finyx
                                         </button>
                                     </div>
                                 </div>
